@@ -6,16 +6,16 @@
 
 <p role="status">Current count: @currentCount</p>
 
-<MatButton Icon="face" 
+<MatButton Icon="favorite" 
     OnClick="@IncrementCount" 
-    Label="Simple Button"></MatButton>
+    Label="Click to increment"></MatButton>
 
 @code {
     private int currentCount = 0;
 
     private void IncrementCount()
     {
-        Random rand = new Random(DateTime.Now.Millisecond);
-        currentCount = rand.Next();
+        
+        currentCount = currentCount + 1;
     }
 }

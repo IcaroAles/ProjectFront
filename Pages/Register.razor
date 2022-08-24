@@ -1,0 +1,25 @@
+@page "/register"
+
+<PageTitle>Register</PageTitle>
+
+<h1>Register</h1>
+
+    <p>
+            <MatTextField @bind-Value="@Email" Label="E-mail" Icon="mail_outline" Outlined="true"></MatTextField>
+        </p>
+        <p>
+        <MatTextField @bind-Value="@Password" Label="Password" Icon="lock_outline" IconTrailing="true" Required="true" Type="password" Outlined="true"></MatTextField>
+        </p>
+        <p>
+        <MatTextField @bind-Value="@Confirm" Label="Confirm Password" Icon="lock_outline" IconTrailing="true" Required="true" Type="password" Outlined="true"></MatTextField>
+        </p>
+ 
+        @code
+        {
+            private string Email;
+            private string Password;
+            private string Confirm;
+        }
+
+        <h5 class="mat-subtitle1">Internal Link</h5>
+        <MatButton Link="/confirmregister">Confirm</MatButton>
